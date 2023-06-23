@@ -71,3 +71,31 @@ Nest is an MIT-licensed open source project. It can grow thanks to the sponsors 
 ## License
 
 Nest is [MIT licensed](LICENSE).
+
+
+![alt_text](image/TypeOrm_Relations.png)
+
+
+# Data Module
+
+### Employee table 
+
++ can reference self (managers and direct reports ) . if manager is deleted set reference to NULL
++ **OneToOne** relationship with contact Info
++ **OneToMany** relationship with tasks
++ **ManyToMany** relationship with meetings
+
+### Contact Info Table
+
++ **OneToOne** relationship with Employee
++ **Delete** if Employee is deleted
+
+### Task Table 
+
++ **ManyToOne** relationship with Employee
++ set employeeId to Null if Employee is deleted
+
+### Meeting Table 
+
++ **ManyToMany** relationship with Employee (via relationship table)
++ Remove Employee as attendee if Employeed  is deleted 

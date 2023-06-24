@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import { Controller, Get } from '@nestjs/common';
 import { AppService } from './app.service';
 
@@ -6,7 +7,10 @@ export class AppController {
   constructor(private readonly appService: AppService) {}
 
   @Get()
-  getHello(): string {
-    return this.appService.getHello();
+  async getHello(): Promise<any> {
+    await this.appService.seed();
+    // return this.appService.getEmployeeById(1);
+    return this.appService.deleteEmployee(1);
+
   }
 }

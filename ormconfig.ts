@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import { SqliteConnectionOptions } from 'typeorm/driver/sqlite/SqliteConnectionOptions';
 const config: SqliteConnectionOptions = {
   type: 'sqlite',

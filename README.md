@@ -73,7 +73,7 @@ Nest is an MIT-licensed open source project. It can grow thanks to the sponsors 
 Nest is [MIT licensed](LICENSE).
 
 
-![alt_text](image/TypeOrm_Relations.png)
+![alt_text](src/image/TypeOrmRelations.png)
 
 
 # Data Module
